@@ -1,0 +1,49 @@
+$theme-color: #201847;
+
+nav {
+  display: block;
+  position: fixed!important;
+  height: 18vh;
+  min-height: 18vh;
+  max-height: 18vh;
+  max-width: 100%;
+  width: 100%;
+  z-index: 1000;
+  overflow: hidden;
+  background-color: white;
+  color: $theme-color;
+  border-bottom: 2px solid $theme-color;
+
+  img {
+    height: 13vh;
+    min-height: 13vh;
+    max-height: 13vh;
+  }
+}  
+nav.darkTheme {
+  background-color: $theme-color;
+  color: white;
+  border-bottom: 2px solid white;
+}
+@media (max-height: 700px) {
+ nav {
+  #options-container{
+    position: fixed;
+    top: 2px;
+  }
+  img {
+    height: 10vh;
+    min-height: 10vh;
+    max-height: 10vh;
+    position: fixed;
+    top: 1.5rem;
+    right: 2rem;
+    }
+  }
+}
+
+@media (max-height: 500px) {
+  nav img {
+   display: none;
+  }
+}

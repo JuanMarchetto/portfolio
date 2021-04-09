@@ -1,0 +1,31 @@
+$theme-color: #201847;
+
+#theme-toggle {
+  overflow: hidden;
+  width: 1rem;
+  height: 1rem;
+  border: solid 1px $theme-color;
+
+  &::after,
+  &::before {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    content: " ";
+  }
+
+  &::after {
+    left: 50%;
+    background-color: $theme-color;
+  }
+
+  &::before {
+    left: 0;
+    background-color: white;
+  }
+}
+
+.darkTheme #theme-toggle{
+  border: solid 1px white;
+}

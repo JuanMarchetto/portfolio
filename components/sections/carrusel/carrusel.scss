@@ -1,0 +1,36 @@
+.carrusel{
+    position: relative;
+
+    .row{
+        overflow: hidden;
+
+        button{
+            width: 2rem;
+            height: 4rem;
+            position: absolute;
+            opacity: 0.5;
+            z-index: 500;
+            font-size: 2rem;
+            font-weight: bolder;
+            top: calc(50% - 2rem);
+            padding: 0;
+            &:hover{
+                opacity: 0.9;
+                width: 5vw;
+            }
+
+            &:first-child{
+                left: 0;
+            }
+
+            &:last-child{
+                right: 0;
+            }
+        }
+        img{
+            max-height: inherit;
+            max-width: inherit;
+        }
+    }
+
+}

@@ -1,0 +1,54 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+// custom variables
+@font-face {
+  font-family: recursive;
+  src: url('/recursive.ttf');
+}
+:root {
+--font-family-sans-serif: recursive;
+}
+
+$theme-color: #201847;
+html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
+body{
+  font: 1rem/1.5 var(--font-family-sans-serif);
+  overflow-y: auto;
+  max-width: 100vw;
+  background-color: white;
+  color: $theme-color;
+
+  .darkTheme{
+    background-color: $theme-color;
+    color: white;
+  }
+  
+  &::-webkit-scrollbar {
+
+    width: 0.5rem;
+    
+    &-track {
+      background-color:#777;
+    }
+    
+        &-thumb{
+          background-color:#ccc;
+          border-radius:0.25rem;
+    
+          &:hover{
+            background-color:#ccc;
+            border:1px solid #333;
+          }
+    
+          &:active{
+            background-color:#666;
+            border:1px solid #333;
+          }
+        }
+      }
+}
